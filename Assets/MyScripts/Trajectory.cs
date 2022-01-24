@@ -20,11 +20,12 @@ public class Trajectory : MonoBehaviour
     }
     void Update()
     {
-        LaunchProjectile();
+        //  LaunchProjectile();
+        Shoot();
     }
     void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 1 && canShoot)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount < 2 && canShoot)
         {
             LaunchProjectile();
             
